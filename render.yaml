@@ -1,6 +1,6 @@
 services:
 - type: web
-  name: bernhard.xapi
+  name: bernhard-xapi
   runtime: static
   repo: https://github.com/bernhard-xapi/xapi
   branch: docs
@@ -9,7 +9,7 @@ services:
     if [ ! -x $XDG_CACHE_HOME/hugo ]; then mkdir -p ~/tmp;
       wget -P ~/tmp https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/${T};
       cd ~/tmp; tar -xzvf ${T}; mv hugo $XDG_CACHE_HOME/hugo; cd $HOME/project/src/doc;
-    fi;$XDG_CACHE_HOME/hugo --gc --minify -b https://bernhard.xapi.onrender.com
+    fi;$XDG_CACHE_HOME/hugo --gc --minify -b https://bernhard-xapi.onrender.com
   staticPublishPath: public
   buildFilter:
     paths:
